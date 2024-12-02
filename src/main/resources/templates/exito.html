@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registro Exitoso</title>
+    <style>
+        /* Estilo general para el body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Contenedor para mostrar los datos */
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            margin: 20px;
+        }
+
+        /* Título principal */
+        h1 {
+            text-align: center;
+            color: #28a745;
+            font-size: 30px;
+        }
+
+        /* Estilo para los párrafos */
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        /* Resaltar los datos del alumno */
+        span {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        /* Estilo para los botones (opcional, si se agregan más botones de acción) */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>¡Registro Exitoso!</h1>
+
+    <p>Nombre: <span th:text="${alumno.nombre}"></span></p>
+    <p>Apellido Paterno: <span th:text="${alumno.apellidoPaterno}"></span></p>
+    <p>Apellido Materno: <span th:text="${alumno.apellidoMaterno}"></span></p>
+    <p>Fecha de Nacimiento: <span th:text="${alumno.fechaNacimiento}"></span></p>
+    <p>Lugar de Residencia: <span th:text="${alumno.lugarResidencia}"></span></p>
+    <p>Edad: <span th:text="${alumno.edad}"></span></p>
+    <p>Teléfono: <span th:text="${alumno.telefono}"></span></p>
+    <p>Correo Electrónico: <span th:text="${alumno.correoElectronico}"></span></p>
+
+    <!-- Botón para regresar o hacer algo más -->
+    <a href="/registro" class="btn">Regresar al Formulario de Registro</a>
+</div>
+
+</body>
+</html>
